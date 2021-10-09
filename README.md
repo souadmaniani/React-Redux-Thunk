@@ -1,1 +1,1 @@
-# -Redux-Redux-Thunk-React
+# React-Redux-Thunk
