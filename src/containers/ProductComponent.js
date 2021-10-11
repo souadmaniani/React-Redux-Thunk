@@ -7,7 +7,7 @@ const ProductComponent = () => {
 	const renderList = products.map((product) => {
 		const { id, title, image, price, category } = product;
 		return (
-			id ? 
+			id === undefined ? <div key={1}>...Loading</div> :
 			<div  key={id} className="four wide column">
 				<Link to={`/product/${id}`}>
 					<div className="ui link cards">
@@ -23,7 +23,7 @@ const ProductComponent = () => {
 						</div>
 					</div>
 				</Link>
-			</div> : <div>...Loading</div>
+			</div>
 		);
   });
   return <>{renderList}</>;
